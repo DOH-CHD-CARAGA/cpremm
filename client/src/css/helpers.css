@@ -1,0 +1,56 @@
+#user-act-pagination .count {
+   cursor: pointer;
+}
+
+#qr-modal {
+   /* padding: 0 20px 10px 20px; */
+}
+
+.qr-code-display {
+   width: 175px;
+   height: 185px;
+   border: 1px solid rgb(65, 60, 60);
+   padding: 10px;
+}
+
+.qr-code-display canvas {
+   width: 154px !important;
+   height: 154px !important;
+   margin: auto;
+}
+
+.qr-code-display strong {
+   font-size: 8px;
+   margin-top: -6px;
+   float: left;
+}
+
+.qr-code-display span {
+   font-size: 7.3px;
+   margin-top: -4px;
+   float: right;
+}
+
+.qr-code-display .qr-details {
+   /* margin-top: -10px; */
+   text-align: right;
+}
+
+#qr-modal .row {
+   margin: 0;
+}
+
+#qr-modal .row .qr.col-md-2 {
+   padding: 0;
+   margin-bottom: 10.15px;
+}
+
+@media print {
+   .qr-code-display strong {
+      margin-top: -2px;
+   }
+   
+   .qr-code-display span {
+      margin-top: 0;
+   }
+}

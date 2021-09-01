@@ -1,0 +1,53 @@
+{
+  "name": "doh-kmict-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.1",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.9.3",
+    "qrcode.react": "^0.9.3",
+    "react": "^16.11.0",
+    "react-alice-carousel": "^2.3.0",
+    "react-chartjs-2": "^2.7.4",
+    "react-dom": "^16.11.0",
+    "react-html-table-to-excel": "^2.0.0",
+    "react-icons": "^3.1.0",
+    "react-qr-code": "^1.1.1",
+    "react-qr-reader": "^2.2.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.2.0",
+    "react-select": "^3.1.0",
+    "react-sound": "^1.2.0",
+    "react-switch": "^6.0.0",
+    "react-to-print": "^2.7.0",
+    "react-toastify": "^5.0.0",
+    "reactstrap": "^8.1.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.2.0",
+    "systeminformation": "^4.26.9",
+    "xlsx": "^0.16.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

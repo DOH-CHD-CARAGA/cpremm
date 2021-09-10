@@ -351,11 +351,11 @@ const recordTable = (props) => {
           body: (record, i) => {
             return (
               <tr style={{ fontSize: "9px" }} className="clickable">
-                <td scope="col" className='d-lg-block d-md-none d-sm-none d-xs-none'>{i + 1}</td>
-                <td scope="col" className='d-lg-block d-md-none d-sm-none d-xs-none'>{props.GetSafe(() => { return (record.hasOwnProperty("office")) ? record.office.division : record.text.division }, "")}</td>
-                <td scope="col" className='d-lg-block d-md-none d-sm-none d-xs-none'>{props.GetSafe(() => { return (record.hasOwnProperty("office")) ? record.office.section : record.text.section }, "")}</td>
+                <td scope="col">{i + 1}</td>
+                <td scope="col">{props.GetSafe(() => { return (record.hasOwnProperty("office")) ? record.office.division : record.text.division }, "")}</td>
+                <td scope="col">{props.GetSafe(() => { return (record.hasOwnProperty("office")) ? record.office.section : record.text.section }, "")}</td>
                 <td scope="col">{props.GetSafe(() => { return (record.endUser.userPAR) ? props.ArrangeName(record.endUser.userPAR.name) : record.text.userPAR }, "")}</td>
-                <td scope="col" className='d-lg-block d-md-none d-sm-none d-xs-none'>{props.GetSafe(() => { return (record.endUser.userCO) ? props.ArrangeName(record.endUser.userCO.name) : record.text.userCO }, "")}</td>
+                <td scope="col">{props.GetSafe(() => { return (record.endUser.userCO) ? props.ArrangeName(record.endUser.userCO.name) : record.text.userCO }, "")}</td>
                 <td scope="col">{props.GetSafe(() => { return (record.devices.desktop.propertyCode != "" && record.devices.desktop.propertyCode != " ") ? record.devices.desktop.propertyCode : "--------" }, "")}</td>
                 <td scope="col">{props.GetSafe(() => { return (record.devices.desktop.serial != "" && record.devices.desktop.serial != " ") ? record.devices.desktop.serial : "--------" }, "")}</td>
                 <td scope="col">{props.GetSafe(() => { return (record.devices.desktop.status) ? "In Use" : "Waste" }, "")}</td>

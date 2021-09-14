@@ -60,7 +60,11 @@ const GetOtherDevicesList = ({ props, devices }) => {
     scanner: [],
     ups: [],
     avr: [],
+    router: [],
+    camera: [],
+    speaker: [],
     projector: [],
+    tablet: [],
   };
 
   for (let x = 0; x < devices.length; x++) {
@@ -82,7 +86,11 @@ const GetOtherDevicesList = ({ props, devices }) => {
   len = (len > deviceList.scanner.length) ? len : deviceList.scanner.length;
   len = (len > deviceList.ups.length) ? len : deviceList.ups.length;
   len = (len > deviceList.avr.length) ? len : deviceList.avr.length;
+  len = (len > deviceList.router.length) ? len : deviceList.router.length;
+  len = (len > deviceList.camera.length) ? len : deviceList.camera.length;
+  len = (len > deviceList.speaker.length) ? len : deviceList.speaker.length;
   len = (len > deviceList.projector.length) ? len : deviceList.projector.length;
+  len = (len > deviceList.tablet.length) ? len : deviceList.tablet.length;
 
   var temp = [];
   for (let x = 0; x < len; x++) {
@@ -98,7 +106,6 @@ const GetOtherDevicesList = ({ props, devices }) => {
               <td scope="col"></td>
               <td scope="col"></td>
               <td scope="col"></td>
-
               <td scope="col"></td>
               <td scope="col"></td>
               <td scope="col"></td>
@@ -111,6 +118,10 @@ const GetOtherDevicesList = ({ props, devices }) => {
               <GetTableTDTemplate props={props} device={deviceList.scanner[i]} />
               <GetTableTDTemplate props={props} device={deviceList.ups[i]} />
               <GetTableTDTemplate props={props} device={deviceList.avr[i]} />
+              <GetTableTDTemplate props={props} device={deviceList.router[i]} />
+              <GetTableTDTemplate props={props} device={deviceList.camera[i]} />
+              <GetTableTDTemplate props={props} device={deviceList.speaker[i]} />
+              <GetTableTDTemplate props={props} device={deviceList.tablet[i]} />
               <GetTableTDTemplate props={props} device={deviceList.projector[i]} />
             </tr>
           )
@@ -167,6 +178,10 @@ const recordTable = (props) => {
                     <th scope="col" colSpan={5}>Scanner</th>
                     <th scope="col" colSpan={5}>UPS</th>
                     <th scope="col" colSpan={5}>AVR</th>
+                    <th scope="col" colSpan={5}>Router</th>
+                    <th scope="col" colSpan={5}>Camera</th>
+                    <th scope="col" colSpan={5}>Speaker</th>
+                    <th scope="col" colSpan={5}>Tablet</th>
                     <th scope="col" colSpan={5}>Projector</th>
                   </tr>
 
@@ -206,7 +221,11 @@ const recordTable = (props) => {
                     <GetTableTDTemplate props={props} device={record.devices.scanner} />
                     <GetTableTDTemplate props={props} device={record.devices.ups} />
                     <GetTableTDTemplate props={props} device={record.devices.avr} />
-                    <GetTableTDTemplate props={props} device={{}} />
+                    <GetTableTDTemplate props={props} device={record.devices.router} />
+                    <GetTableTDTemplate props={props} device={record.devices.camera} />
+                    <GetTableTDTemplate props={props} device={record.devices.speaker} />
+                    <GetTableTDTemplate props={props} device={record.devices.tablet} />
+                    <GetTableTDTemplate props={props} device={record.devices.projector} />
                   </tr>
 
                   <GetOtherDevicesList props={props} devices={record.otherDevices} />

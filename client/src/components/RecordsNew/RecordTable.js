@@ -36,9 +36,9 @@ const GetHeaderTemplate = () => {
 }
 
 const GetTableTDTemplate = ({ props, device }) => {
-  console.log("++++++++++++++++++++++++++++++++++++++++++++++***************88");
-  console.log(props);
-  console.log(device);
+  // console.log("++++++++++++++++++++++++++++++++++++++++++++++***************88");
+  // console.log(props);
+  // console.log(device);
   return (
     <Fragment>
       <td scope="col">{props.GetSafe(() => { return device.endUser.userPAR }, props.GetSafe(() => { return device.text.userPAR }, ""))}</td>
@@ -51,8 +51,8 @@ const GetTableTDTemplate = ({ props, device }) => {
 }
 
 const GetOtherDevicesList = ({ props, devices }) => {
-  console.log("::::::::::::___________++=");
-  console.log(devices);
+  // console.log("::::::::::::___________++=");
+  // console.log(devices);
   var deviceList = {
     laptop: [],
     monitor: [],

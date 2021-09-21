@@ -154,7 +154,8 @@ class Table1 extends React.Component {
                           value={
                             (record.office.hasOwnProperty("division"))
                               ? (record.office.division + " - " + record.office.section)
-                              : record.text.division + " - " + record.text.section
+                              :""
+                              // : record.text.division + " - " + record.text.section
                           }
                           title={<span>Division - Section<span className="astrsk"> *</span></span>}
                           options={[{ value: "office", text: "Office" }]}
@@ -166,7 +167,6 @@ class Table1 extends React.Component {
                             display: (data, callback) => {
                               return (
                                 <div className="row" onClick={() => {
-
                                   callback(data.division + " - " + data.section);
                                   this.props.SetUserRecordEntry(data, "office");
 
@@ -196,7 +196,7 @@ class Table1 extends React.Component {
                             <Search2
                               onChange={(val) => {
                                 this.setState({
-                                  currentSearch: 3,
+                                  currentSearch: 4,
                                   desktopKey: val,
                                 });
                               }}
@@ -212,7 +212,7 @@ class Table1 extends React.Component {
                               api="device/get"
                               reducer={SET_REACT_SELECT_RECORD_OPTIONS_NEW}
                               minChar={3}
-                              suggest={(this.state.currentSearch == 3) ? {
+                              suggest={(this.state.currentSearch == 4) ? {
                                 display: (data, callback) => {
                                   return (
                                     <div onClick={() => {

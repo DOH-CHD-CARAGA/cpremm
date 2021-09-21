@@ -50,7 +50,9 @@ exports.get = (req, res) => {
     var cond = data.find;
     
     var keys = Object.keys(cond || []);
-
+    console.log("++++++++++++++==============:::");
+    console.log(data);
+    console.log(cond);
     keys.map((key, i) => {
       regexFilter = new RegExp(["", cond[key], ""].join(""), "i");
       if (false) {

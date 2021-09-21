@@ -79,8 +79,8 @@ class Search extends Component {
               // alert(inpt.nativeEvent.inputType);
               // if naay clearAll
               if (inpt.nativeEvent.inputType == "deleteContentBackward" && this.props.hasOwnProperty("ClearText")) {
-                var respone = this.props.ClearText();
-                if (respone == undefined || (respone != undefined && respone.clearAll)) {
+                var response = this.props.ClearText();
+                if (response == undefined || (response != undefined && response.clearAll)) {
                   this.setState({
                     keyword: ""
                   });                    

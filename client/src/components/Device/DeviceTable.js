@@ -26,8 +26,8 @@ import {
 import DataTable from '../helpers/DataTable';
 
 const deviceTable = (props) => {
-  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^66");
-  console.log(props);
+  // console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^66");
+  // console.log(props);
   return (
 
     <Fragment>

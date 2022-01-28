@@ -341,7 +341,7 @@ class RecordPrintableFormFront extends React.Component {
 								<td style={{border: "1px solid #000000"}} colSpan={2} align="center" valign="middle">{ data.item }</td>
 								<td style={{border: "1px solid #000000"}} colSpan={3} align="center" valign="middle">{ data.findings }</td>
 								<td style={{border: "1px solid #000000"}} colSpan={4} align="center" valign="middle" sdnum="1033;0;@">{ data.actionTaken }</td>
-								<td style={{border: "1px solid #000000"}} colSpan={2} align="center" valign="middle" sdnum="1033;0;MM/DD/YY;@">{ this.props.ArrangeDate(data.date) }</td>
+								<td style={{border: "1px solid #000000"}} colSpan={2} align="center" valign="middle" sdnum="1033;0;MM/DD/YY;@">{ this.props.ArrangeDate(data.date,false) }</td>
 							</tr>				
 						);					
 					})

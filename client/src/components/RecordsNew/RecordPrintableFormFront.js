@@ -77,7 +77,6 @@ class RecordPrintableFormFront extends React.Component {
 	for (var x = 0; x < (10 - arranged.correctiveAction.length); x++) {
 		empty.push({});
 	}
-	
 
     return (
       <div id="record-form" className="entry-form">
@@ -94,7 +93,7 @@ class RecordPrintableFormFront extends React.Component {
 				<colgroup width={"51"}></colgroup>
 				<colgroup width={"43"}></colgroup>
 				<tbody><tr>
-					<td style={{borderBottom: "1px solid #000000"}} colSpan={14} rowSpan="2" height="56" align="center" valign="middle"><b><font face="Lucida Sans" size="3" color="#000000">KNOWLEDGE MANAGEMENT- INFORMATION AND COMMUNICATION TECHNOLOGY<br/>IT CORRECTIVE &amp; PREVENTIVE MAINTENANCE MONITORING RECORD QUARTERLY CY: 2021</font></b></td>
+					<td style={{borderBottom: "1px solid #000000"}} colSpan={14} rowSpan="2" height="56" align="center" valign="middle"><b><font face="Lucida Sans" size="3" color="#000000">KNOWLEDGE MANAGEMENT- INFORMATION AND COMMUNICATION TECHNOLOGY<br/>IT CORRECTIVE &amp; PREVENTIVE MAINTENANCE MONITORING RECORD QUARTERLY CY: 2022</font></b></td>
 					</tr>
 				<tr>
 					</tr>

@@ -42,7 +42,7 @@ class RecordPrintableFormFront extends React.Component {
 		unitType: this.props.GetSafe(() => {return desktop.type}, ""),
 		brand: this.props.GetSafe(() => {return desktop.brand}, ""),
 		specs: this.props.GetSafe(() => {return desktop.specs.hWare.cpu}, ""),
-		dateAcq: this.props.GetSafe(() => {return this.props.ArrangeDate(desktop.dateAcquired)}, ""),
+		dateAcq: this.props.GetSafe(() => {return this.props.ArrangeDate(desktop.dateAcquired,false)}, ""),
 		purchased: this.props.GetSafe(() => {return desktop.purchased}, ""),
 		donated:  this.props.GetSafe(() => {return desktop.donated}, ""),
 		endUser: this.props.GetSafe(() => {return par + " : C/O " + co}, ""),
@@ -276,7 +276,7 @@ class RecordPrintableFormFront extends React.Component {
 				<tr>
 					<td style={{border: "1px solid #000000", textAlign: "center"}} colSpan={5} height="24" valign="middle">{ arranged.software.os }</td>
 					<td valign="middle"></td>
-					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.os) }</td>
+					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.os,false) }</td>
 					</tr>
 				<tr>
 					<td style={{border: "1px solid #000000", textAlign:"center"}} colSpan={5} height="26" align="center" valign="middle"><b><font>OFFICE APPLICATIONS</font></b></td>
@@ -286,7 +286,7 @@ class RecordPrintableFormFront extends React.Component {
 				<tr>
 					<td style={{border: "1px solid #000000", textAlign:"center"}} colSpan={5} height="24" valign="middle">{ arranged.software.office }</td>
 					<td valign="middle"></td>
-					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.office) }</td>
+					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.office,false) }</td>
 					</tr>
 				<tr>
 					<td style={{border: "1px solid #000000"}} colSpan={5} height="26" align="center" valign="middle"><b><font>ANTIVIRUS, ANTI-MALWARE/SPYWARE</font></b></td>
@@ -296,7 +296,7 @@ class RecordPrintableFormFront extends React.Component {
 				<tr>
 					<td style={{border: "1px solid #000000", textAlign:"center"}} colSpan={5} height="24" valign="middle">{ arranged.software.antivirus }</td>
 					<td valign="middle"></td>
-					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.antivirus) }</td>
+					<td style={{border: "1px solid #000000"}} colSpan={8} align="center" valign="middle">{ this.props.ArrangeDate(arranged.software.dates.antivirus,false) }</td>
 					</tr>
 				<tr>
 					<td style={{border: "1px solid #000000"}} colSpan={5} rowSpan="2" height="48" align="center" valign="middle"><b><font>End-User's Signature</font></b></td>

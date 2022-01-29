@@ -60,7 +60,7 @@ class JobOrderReport extends React.Component {
                <div id="main-content" className="row upper-details">
                   <LabelDisplay id="jobOrderNumber" label="JOB ORDER #: " value={this.props.GetSafe(()=>{return jobOrderRequest.jobOrderRequestID}, "")}/>
 
-                  <LabelDisplay label="Date : " value={this.props.ArrangeDate(this.props.GetSafe(()=>{return jobOrderRequest.requestDate}, new Date()))}/>
+                  <LabelDisplay label="Date : " value={this.props.ArrangeDate(this.props.GetSafe(()=>{return jobOrderRequest.requestDate}, new Date()),false)}/>
 
                   <LabelDisplay label="Item : " value={this.props.GetSafe(()=>{return jobOrderRequest.device.brand}, "") + " " + this.props.GetSafe(()=>{return jobOrderRequest.device.model}, "")}/>
 

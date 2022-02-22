@@ -12,4 +12,4 @@ CPreMM Portal v1
 * git clone
 * npm install
 * npm start
-* Database configuration
+* Database API configuration

@@ -1,0 +1,62 @@
+{
+  "name": "cpremm-portal-doh-caraga",
+  "authors": [
+    "Rolando C. Becerro Jr."
+  ],
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "antd": "^4.16.6",
+    "apexcharts": "^3.27.1",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "install": "^0.13.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.9",
+    "react-content-loader": "^6.1.0",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "react-dotenv": "^0.1.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-signature-canvas": "^1.0.5",
+    "styled-components": "^5.3.0",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "LIVE_DB_API",
+      "PORTAL_DB_API"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

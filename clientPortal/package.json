@@ -38,7 +38,8 @@
   "react-dotenv": {
     "whitelist": [
       "LIVE_DB_API",
-      "PORTAL_DB_API"
+      "PORTAL_DB_API",
+      "SECURITY_KEY"
     ]
   },
   "eslintConfig": {

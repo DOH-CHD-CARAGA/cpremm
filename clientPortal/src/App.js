@@ -10,6 +10,8 @@ import env from "react-dotenv";
 import LandingPage from './pages/LandingPage'
 //Views
 import JobOrderForm from "./views/JobOrderForm"
+import JobOrderList from "./views/JobOrderList"
+
 const App = ()=> {
   // eslint-disable-next-line
   const [users, setusers] = useState(null)
@@ -38,6 +40,11 @@ const App = ()=> {
               users={users}
               devices={devices}
               offices={offices}
+            />
+          }
+          JobOrderList={
+            <JobOrderList 
+            
             />
           }
           />}

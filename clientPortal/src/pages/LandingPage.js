@@ -3,6 +3,7 @@ import {
   Layout,
   Row,
   Col,
+  Card,
 } from "antd";
 import "antd/dist/antd.css";
 
@@ -24,6 +25,9 @@ const LandingPage = (props) => {
           </Header>
 
           <Content className="signin">
+            <Card>
+              {props.JobOrderList}
+            </Card>
             {props.JobReqFormUI}
           </Content>
 

@@ -21,7 +21,6 @@ const storage = multer.diskStorage({
         cb(null, new Date().toISOString().split("T")[0] + "-" + file.originalname);
     }
 });
-
 const upload = multer({storage: storage});
 
 function arrangeNumber (value, places) {

@@ -1,0 +1,31 @@
+POST http://localhost:5000/api/portal/get/users
+Content-Type: application/json
+
+{
+    "name": "canonigo"
+}
+
+###
+POST HTTP://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "username": "gladys.buladaco",
+    "password": "password"
+}
+###
+POST  http://localhost:5000/api/portal/get/devices/false
+Content-Type: application/json
+
+{
+    "propertyCode": "2016"
+}
+###
+GET http://localhost:5000/api/portal/dashboard/chart
+###
+GET http://localhost:5000/api/portal/dashboard/wasted
+###
+PATCH http://localhost:5000/api/portal/update/temp/jobRequest/62299a756592fc3b242f84bf/pending
+###
+
+GET http://localhost:5000/api/portal/get/devices/5ec71f9e0a9ec736748d6322

@@ -7,8 +7,7 @@ const checkAdmin = require('../middleware/check-admin');
 
 router.get('/get', JobOrderRequest.get);
 
-//router.post('/new', checkAuth, checkAdmin, JobOrderRequest.new);
-router.post('/new',  JobOrderRequest.new);
+router.post('/new', checkAuth, checkAdmin, JobOrderRequest.new);
 
 router.post('/update', checkAuth, JobOrderRequest.update);
 

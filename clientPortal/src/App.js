@@ -1,57 +1,77 @@
-import { Switch, Route, Redirect } from "react-router-dom"
-// eslint-disable-next-line
-import { useState, useEffect } from "react"
-import api from "./api/api"
-import "antd/dist/antd.css"
-import "./assets/styles/main.css"
-import "./assets/styles/responsive.css"
-import env from "react-dotenv";
-//Components 
-import LandingPage from './pages/LandingPage'
-//Views
-import JobOrderForm from "./views/JobOrderForm"
-import JobOrderList from "./views/JobOrderList"
+import { Switch, Route, Redirect } from "react-router-dom";
+import "antd/dist/antd.css";
+import "./assets/styles/main.css";
+import "./assets/styles/responsive.css";
+import SignIn from "./pages/SignIn";
+import Main from "./components/layout/Main";
+import LandingPage from "./pages/LandingPage";
+import CPreMMPortal from "./pages/CPreMMPortal";
+import JobOrderList from "./pages/JobOrderList";
+
+import { useEffect, useState } from "react";
+import cpremmApi from "./controllers/api/CPreMM/cpremm-api";
 
 const App = ()=> {
-  // eslint-disable-next-line
-  const [users, setusers] = useState(null)
-  // eslint-disable-next-line
-  const [devices, setdevices] = useState(null)
-  // eslint-disable-next-line
-  const [offices, setoffices] = useState(null)
-  
+  const [CPreMM_account, setCPreMM_account] = useState(null)
+
+  const checkIfLogin_CPreMM = async()=>{
+    const res = await cpremmApi.checkAuth()
+    if(res.status===200){
+      setCPreMM_account(res.data)
+    }
+    else {
+      setCPreMM_account(null)
+    }
+  }
+
+  const RedirectURL = ()=>{
+    const url = localStorage.getItem("URL")
+    if(url!==undefined){
+      return url
+    }
+    else {
+      return "/"
+    }
+  }
   useEffect(()=>{
-    const res = api.getDevices()
-    console.log(res.data)
-  },
-  // eslint-disable-next-line
+    checkIfLogin_CPreMM()
+  }, 
   [])
-  
 
   return (
     <div className="App">
-      {console.log(env)}
-        <Switch>
-        <Route path="/" exact 
+      <Switch>
+        {
+        CPreMM_account===null&&
+          <Route path="/sign-in" exact component={SignIn} />
+        }
+        <Main
+        CPreMM_account={CPreMM_account}
+        >
+          <Route exact path="/"
           render={(props) => 
-          <LandingPage
-          JobReqFormUI={
-            <JobOrderForm
-              users={users}
-              devices={devices}
-              offices={offices}
-            />
-          }
-          JobOrderList={
-            <JobOrderList 
+            <LandingPage
+          
+            /> }
+          />
+          <Route exact path="/CPreMM-Portal"
+            render={(props) => 
+            <CPreMMPortal
             
+            />}
+          />
+          {
+            CPreMM_account!==null &&  CPreMM_account.role.name === "Master" &&
+            <Route exact path="/Job-Order-List"
+            render={(props) => 
+              <JobOrderList
+              
+              />}
             />
           }
-          />}
-        />
-
-        <Redirect from="*" to={"/"}/>
-        </Switch>
+          <Redirect from="*" to={RedirectURL()} />
+        </Main>
+      </Switch>
     </div>
   );
 }

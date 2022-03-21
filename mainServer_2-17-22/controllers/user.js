@@ -14,7 +14,7 @@ exports.new = (req, res) => {
   TryCatch(async (res, req) => {
     var data = req.body;
 
-    const userID = await GetNewID (User, "userID", 1, 3, "DOH13U");
+    userID = await GetNewID (User, "userID", 1, 3, "DOH13U");
     bcrypt.hash('password', 10, function(err, hash) {
       // Store hash in your password DB.
         var newUser = new User({
@@ -33,7 +33,6 @@ exports.new = (req, res) => {
             res.json({status: true, user: user});
           })
           .catch(err => {
-            console.log(err.message);
             return res.status(500).send();
           })
       });
@@ -172,7 +171,6 @@ exports.login = (req, res) => {
   
   }, "Login User", "Server - api/user.js -> Line: 19 - 30", 2, req, res);
 }
-
 
 
 exports.multipleEntry = (req, res) => {

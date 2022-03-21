@@ -6,8 +6,7 @@ const checkAdmin = require('../middleware/check-admin');
 
 router.get('/get', User.get);
 
-//router.post('/new-user', checkAuth, checkAdmin, User.new);
-router.post('/new-user', User.new);
+router.post('/new-user', checkAuth, checkAdmin, User.new);
 
 router.post('/update', User.update);
 

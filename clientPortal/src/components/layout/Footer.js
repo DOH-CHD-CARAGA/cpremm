@@ -8,42 +8,7 @@ function Footer() {
       <Row className="just">
         <Col xs={24} md={12} lg={12}>
           <div className="copyright">
-            © 2021
-            {' '}
-            NORMI
-          </div>
-        </Col>
-        <Col xs={24} md={12} lg={12}>
-          <div className="footer-menu">
-            <ul>
-              <li className="nav-item">
-                <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
+            © 2022 KIMCT, DOH CHD Caraga XIII
           </div>
         </Col>
       </Row>

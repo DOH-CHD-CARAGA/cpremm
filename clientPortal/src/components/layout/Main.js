@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Layout, Drawer, Affix, Modal, Col } from "antd";
+import { Layout, Drawer, Affix } from "antd";
 import Sidenav from "./Sidenav";
 import Header from "./Header";
 import Footer from "./Footer";
 
-import { Spin, Alert } from 'antd'
-import PaymentHandler from "../../controller/PaymentHandler/PaymentHandler";
-import Setter from "../../controller/Setter/Setter";
-
 const { Header: AntHeader, Content, Sider } = Layout;
 
-const Main = ({ children, userinfo, soa, setsoa })=> {
+function Main({ children, CPreMM_account }) {
   const [visible, setVisible] = useState(false);
   const [placement, setPlacement] = useState("right");
   const [sidenavColor, setSidenavColor] = useState("#1890ff");
@@ -32,18 +28,8 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
     } else {
       setPlacement("right");
     }
-  }, [pathname])
-  
-  const [source, setsource] = useState(localStorage.getItem('source')!==null? JSON.parse(localStorage.getItem('source')) : null)
+  }, [pathname]);
 
-  useEffect(()=>{
-    if(source!==null){
-      PaymentHandler.retrieveSource(setsource, source.id)
-    }
-  },
-  [])
-
-  const [addedToLogs, setaddedToLogs] = useState(false)
   return (
     <Layout
       className={`layout-dashboard ${
@@ -67,7 +53,7 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
             pathname === "rtl" ? "layout-dashboard-rtl" : ""
           }`}
         >
-          <Sider
+          <Sider hi
             trigger={null}
             width={250}
             theme="light"
@@ -76,7 +62,7 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
             }`}
             style={{ background: sidenavType }}
           >
-            <Sidenav color={sidenavColor} userinfo={userinfo} hidden />
+            <Sidenav color={sidenavColor} CPreMM_account={CPreMM_account} />
           </Sider>
         </Layout>
       </Drawer>
@@ -94,7 +80,7 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
         }`}
         style={{ background: sidenavType }}
       >
-        <Sidenav color={sidenavColor} userinfo={userinfo} />
+        <Sidenav color={sidenavColor}  CPreMM_account={CPreMM_account} />
       </Sider>
       <Layout>
         {fixed ? (
@@ -107,7 +93,7 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
                 handleSidenavColor={handleSidenavColor}
                 handleSidenavType={handleSidenavType}
                 handleFixedNavbar={handleFixedNavbar}
-                userinfo={userinfo}
+                CPreMM_account={CPreMM_account}
               />
             </AntHeader>
           </Affix>
@@ -120,35 +106,11 @@ const Main = ({ children, userinfo, soa, setsoa })=> {
               handleSidenavColor={handleSidenavColor}
               handleSidenavType={handleSidenavType}
               handleFixedNavbar={handleFixedNavbar}
-              userinfo={userinfo}
+              CPreMM_account={CPreMM_account}
             />
           </AntHeader>
         )}
-        {
-          source!==null?
-          <Modal
-          title={<b>Payment Status</b>}
-          centered={true}
-          visible={source!==null}
-          width={1000}
-          height={"auto"}
-          onOk={() => { 
-            PaymentHandler.payeWallet(source, setsource, setaddedToLogs, soa, setsoa)
-          }}
-          onCancel={() => {
-            PaymentHandler.payeWallet(source, setsource, setaddedToLogs, soa, setsoa)
-          }}
-        >
-          <center> <Spin  tip={`Processing Payment....`} hidden={addedToLogs}  /> </center>
-          <center>Click OK to proceed</center>
-          
-        </Modal> 
-        :
-        <></>
-        }
-        <Content className="content-ant">{
-        children
-        }</Content>
+        <Content className="content-ant">{children}</Content>
         <Footer />
       </Layout>
     </Layout>

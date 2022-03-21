@@ -36,7 +36,7 @@ const JobOrderRequest = new Schema({
   },
 
   status: {type: String, default: "pending"},
-
+  fromPortal: {type: Boolean }
 });
 
 module.exports = mongoose.model('jobOrderRequests', JobOrderRequest);

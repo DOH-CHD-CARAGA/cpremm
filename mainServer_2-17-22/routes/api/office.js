@@ -7,9 +7,8 @@ const checkAdmin = require('../middleware/check-admin');
 
 router.get('/get', Office.get);
 
-//router.post('/new', checkAuth, checkAdmin, Office.new);
+router.post('/new', checkAuth, checkAdmin, Office.new);
 
-router.post('/new', Office.new);
 router.post('/update', checkAuth, Office.update);
 
 module.exports = router;

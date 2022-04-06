@@ -7,8 +7,8 @@
 // export const SERVER_URI = 'http://157.230.255.216:5000';
 // export const SERVER_API = 'http://157.230.255.216:5000/api';
 
-export const SERVER_URI = 'https://doh.creativspark.co/server';
-export const SERVER_API = 'https://doh.creativspark.co/server/api';
+export const SERVER_URI = 'https://dohcaraga.org/server';
+export const SERVER_API = 'https://dohcaraga.org/server/api';
 
 export const JWT = 'doh-jwt';
 export const USER_ROUTES = 'doh-user-routes';

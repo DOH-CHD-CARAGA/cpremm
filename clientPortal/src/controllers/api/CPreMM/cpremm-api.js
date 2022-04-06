@@ -5,7 +5,8 @@ import env from "react-dotenv"
 const JWT = localStorage.getItem("CPreMM_JWT")
 
 const CPreMM_API =  axios.create({
-  baseURL: "https://dohcaraga.org/server/api",//env.PORTAL_DB_API,
+  baseURL: "https://dohcaraga.org/api",//env.PORTAL_DB_API,
+  // baseURL: "http://localhost:5000/api",//env.PORTAL_DB_API,
   headers: {
     "Content-type": "application/json",
     "Authorization": "Bearer "+ JWT

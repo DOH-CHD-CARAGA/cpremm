@@ -1,6 +1,4 @@
 window.env = {
-  "LIVE_DB_API": "http://192.168.0.101:5000/api",
-  "PORTAL_DB_API": "http://localhost:5000/api/portal",
   "CAPTCHA_SITE_KEY": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
   "CAPTCHA_SECRET_KEY": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
   "SECURITY_KEY": "RANDOM_HASH_LATER"

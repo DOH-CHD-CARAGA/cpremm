@@ -4,7 +4,7 @@ import { FacebookProvider, Page } from 'react-facebook';
 import ImgCarousel from "../components/views/ImgCarousel";
 import SystemList from "../components/views/SystemsList";
 
-import DOH from "../assets/images/DOH.png";
+import DOH from "../assets/images/doh.png";
 import DOHCaraga from "../assets/images/dohcaraga.png";
 import CPreMM from "../assets/images/doh-cpremm.png";
 import { isMobile } from "react-device-detect";

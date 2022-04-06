@@ -21,7 +21,7 @@ Content-Type: application/json
     "propertyCode": "2016"
 }
 ###
-GET http://localhost:5000/api/portal/dashboard/chart
+GET http://localhost:5000/api/portal
 ###
 GET http://localhost:5000/api/portal/dashboard/wasted
 ###

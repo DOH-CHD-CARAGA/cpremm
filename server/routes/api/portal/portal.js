@@ -66,7 +66,7 @@ router.get('/get/temp/jobRequest/:status', async(req,res)=>{
     }
 });
 
-router.post('/create/temp/jobRequest', async(req,res)=>{
+router.post('/create/temp/jobRequest', checkAuth, async(req,res)=>{
     try {
         const data = new PortalJobOrderRequest(req.body)
         const saveData = await data.save()
@@ -77,7 +77,7 @@ router.post('/create/temp/jobRequest', async(req,res)=>{
     }
 });
 
-router.post('/update/temp/jobRequest/:_id/:status', async(req,res)=>{
+router.post('/update/temp/jobRequest/:_id/:status', checkAuth, async(req,res)=>{
     try {
         const _id = req.params._id
         const status = req.params.status
@@ -91,7 +91,7 @@ router.post('/update/temp/jobRequest/:_id/:status', async(req,res)=>{
     }
 });
 
-router.post('/add/liveData/jobRequest', async(req,res)=>{
+router.post('/add/liveData/jobRequest', checkAuth, async(req,res)=>{
     try {
         const data = new LiveJobOrderRequest(req.body)
         const saveData = await data.save()
@@ -111,21 +111,6 @@ router.post('/checkAuth', checkAuth, async(req,res)=>{
     }
 });
 
-router.post('/test', async(req,res)=>{
-    try {
-        const devices = await Devices.find({ status: 0, userPAR: null })
-        .populate("userPAR")
-        .populate("userCO")
-        .lean()
-        res.status(200).json({
-            data: devices,
-            count: devices.length
-        })
-    } catch (err) {
-        console.log(err.message)
-        res.status(201).json([])
-    }
-});
 
 router.get('/dashboard/chart', async(req,res)=>{
     try {

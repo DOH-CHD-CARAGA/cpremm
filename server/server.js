@@ -23,8 +23,8 @@ const userComment = require('./routes/api/userComment');
 const appModule = require('./routes/api/appModule');
 const jobOrderRequest = require('./routes/api/jobOrderRequest');
 const sample = require('./routes/api/sampleRoute');
-
-    // "dev": "concurrently \"npm run server\" \"npm run client\""
+const portal = require('./routes/api/portal/portal');
+// "dev": "concurrently \"npm run server\" \"npm run client\""
 
 const app = express();
 
@@ -36,7 +36,6 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-
 
   next();
 });
@@ -107,7 +106,8 @@ app.use('/api/userComment',userComment);
 app.use('/api/jobOrderRequest',jobOrderRequest);
 app.use('/api/admin/appModule', appModule);
 app.use('/api/sample', sample);
-
+//Je Ar
+app.use('/api/portal', portal)
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {

@@ -9,18 +9,20 @@ import DOHCaraga from "../assets/images/dohcaraga.png";
 import CPreMM from "../assets/images/doh-cpremm.png";
 import { isMobile } from "react-device-detect";
 
+import React, { Component }  from 'react';
+
 const LandingPage = ()=> {
   localStorage.setItem("URL", "/")
   const systems = [
     {
       name: "CPreMM",
-      logo: "https://dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png",
-      url: "https://dohcaraga.org/",
+      logo: "https://cpremm.dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png",
+      url: "https://cpremm.dohcaraga.org/",
       description: "Corrective and Preventive Monitoring and Maintenance"
     },
     {
       name: "CPreMM Portal",
-      logo: "https://dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png",
+      logo: "https://cpremm.dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png",
       url: "/CPreMM-Portal",
       description: "Instead of filling out a paper request form, you can use this portal to request job orders."
     }

@@ -1,7 +1,10 @@
 import { Menu } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
 import DOHSeal from "../../assets/images/doh-seal.png";
-import "@fortawesome/fontawesome-free/css/all.min.css"
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import React, { Component }  from 'react';
+
 function Sidenav({ color, CPreMM_account }) {
   const { pathname } = useLocation();
   const page = pathname.replace("/", "");

@@ -1,5 +1,6 @@
 import { Card, Col, Popover } from "antd";
 import { NavLink } from "react-router-dom";
+import React, { Component }  from 'react';
 function SystemList(props) {
     const systems = props.systems
     return (

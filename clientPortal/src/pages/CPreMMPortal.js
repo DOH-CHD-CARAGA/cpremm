@@ -13,7 +13,7 @@ import JobOrderForm from "../components/views/JobOrderForm"
 import JobOrderSteps from "../components/views/Steps";
 import cpremmApi from "../controllers/api/CPreMM/cpremm-api";
 import CPreMMDashboard from "../components/views/CPreMMDashboard";
-
+import React, { Component }  from 'react';
 
 const CPreMMPortal = (props)=> {
   localStorage.setItem("URL", "/CPreMM-Portal")

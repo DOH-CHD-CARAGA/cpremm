@@ -11,6 +11,8 @@ import JobOrderList from "./pages/JobOrderList";
 import { useEffect, useState } from "react";
 import cpremmApi from "./controllers/api/CPreMM/cpremm-api";
 
+import React, { Component }  from 'react';
+
 const App = ()=> {
   const [CPreMM_account, setCPreMM_account] = useState(null)
 

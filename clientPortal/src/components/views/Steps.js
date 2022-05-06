@@ -1,4 +1,5 @@
 import { Steps } from 'antd';
+import React, { Component }  from 'react';
 
 const { Step } = Steps;
 

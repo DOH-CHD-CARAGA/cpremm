@@ -1,4 +1,5 @@
 import { Carousel, Col } from 'antd';
+import React, { Component }  from 'react';
 
 const ImgCarousel = (props) => {
     const images =props.images

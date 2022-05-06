@@ -18,6 +18,8 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 
+import React, { Component }  from 'react';
+
 import { NavLink, Link } from "react-router-dom";
 import avtar from "../../assets/images/team-2.jpg";
 import { isDesktop } from "react-device-detect";

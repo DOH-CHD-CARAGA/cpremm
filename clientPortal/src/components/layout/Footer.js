@@ -1,4 +1,5 @@
 import { Layout, Row, Col } from "antd";
+import React, { Component }  from 'react';
 
 function Footer() {
   const { Footer: AntFooter } = Layout;

@@ -8,6 +8,9 @@ import { useEffect, useState, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import cpremmApi from '../controllers/api/CPreMM/cpremm-api';
 import PrintJobOrderForm from '../components/views/PrintJobOrderForm';
+
+import React, { Component }  from 'react';
+
 const { Search } = Input;
 
 const JobOrderList = ()=>{

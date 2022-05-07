@@ -33,7 +33,7 @@
     "xlsx": "^0.16.0"
   },
   "scripts": {
-    "start": "export PORT=3000 && react-scripts start",
+    "start": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -148,7 +148,7 @@ const CPreMMPortal = (props)=> {
                     size={isDesktop? 300 : 150}
                     bgColor="#F8F8F8"
                     fgColor="#006400"
-                    logoImage={"https://dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png"}
+                    logoImage={"https://cpremm.dohcaraga.org/static/media/DOHLogo3.4f8d6c18.png"}
                     logoWidth={isMobile? 50: 100}
                     logoOpacity={0.3}
                   />
@@ -254,7 +254,7 @@ const CPreMMPortal = (props)=> {
                             setcurrent(current+1)
                           }
                           else if(eSign===null) {
-                            alert("Please provice your signature to proceed!")
+                            alert("Please provide your signature to proceed!")
                           }
                           else {
                             alert("Please fill in the fields correctly and completely!")
@@ -611,7 +611,7 @@ const CPreMMPortal = (props)=> {
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     size={isMobile? "compact" : "normal"}
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" //test key
+                    sitekey="6LfIrdofAAAAAEFLnMaR7y4I-hTWyr2mxs3DzKk0" //test key
                     onChange={()=>{
                       setTimeout(()=>{
                         setshowCAPTCHA(!showCAPTCHA)
@@ -623,6 +623,10 @@ const CPreMMPortal = (props)=> {
                       }, 1000 * 120)
                     }}
                   />
+                  <br/>
+                  This site is protected by reCAPTCHA and the Google &nbsp;
+                  <a href="https://policies.google.com/privacy">Privacy Policy</a> and &nbsp;
+                  <a href="https://policies.google.com/terms">Terms of Service</a> apply.
                   </center>
                 </Col>
               </Card>

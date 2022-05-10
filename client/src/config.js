@@ -1,5 +1,5 @@
-// export const SERVER_URI = 'http://localhost:5000';
-// export const SERVER_API = 'http://localhost:5000/api';
+export const SERVER_URI = 'http://localhost:5000';
+export const SERVER_API = 'http://localhost:5000/api';
 
 // export const SERVER_URI = 'http://192.168.0.113:5000';
 // export const SERVER_API = 'http://192.168.0.113:5000/api';
@@ -7,8 +7,8 @@
 // export const SERVER_URI = 'http://157.230.255.216:5000';
 // export const SERVER_API = 'http://157.230.255.216:5000/api';
 
-export const SERVER_URI = 'https://cpremm.dohcaraga.org';
-export const SERVER_API = 'https://cpremm.dohcaraga.org/api';
+// export const SERVER_URI = 'https://cpremm.dohcaraga.org';
+// export const SERVER_API = 'https://cpremm.dohcaraga.org/api';
 
 export const JWT = 'doh-jwt';
 export const USER_ROUTES = 'doh-user-routes';

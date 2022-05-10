@@ -214,7 +214,6 @@ class HomeScreen extends Component {
                   </div>
 
                 </div>              
-
               </div>
 {/* 
               <div className="col-md-12" style={{marginTop: "20px"}}>

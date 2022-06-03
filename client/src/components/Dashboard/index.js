@@ -206,7 +206,7 @@ class HomeScreen extends Component {
 
                   <div className="col-md-12 custom-container">
                     <div className="custom-container-title">
-                      TOTAL WASTE
+                      TOTAL WASTES
                     </div>
                     <div className="custom-container-body">
                       <h1 className="report-number">{numbers.current.waste.total + numbers.previous.waste.total}</h1>

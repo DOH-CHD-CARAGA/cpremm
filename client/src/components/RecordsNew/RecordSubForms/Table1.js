@@ -76,7 +76,10 @@ class Table1 extends React.Component {
                               this.props.SetValue2("endUser.userPAR", { ...recordDefault.endUser.userPAR }, SET_RECORD_VALUE_NEW);
                             }
                           }
-                          value={((record.endUser.userPAR) && (record.endUser.userPAR.hasOwnProperty("name")) && record.endUser.userPAR.name.first != "") ? this.props.ArrangeName(record.endUser.userPAR.name) : record.text.userPAR}
+                          // value={((record.endUser.userPAR) && (record.endUser.userPAR.hasOwnProperty("name")) && record.endUser.userPAR.name.first != "") ? this.props.ArrangeName(record.endUser.userPAR.name) : record.text.userPAR}
+                          value={this.props.GetSafe(() => {
+                            return this.props.ArrangeName(record.endUser.userPAR.name)
+                          }, record.text.userPAR)}
                           title={<span>PAR<span className="astrsk"> *</span></span>}
                           options={[{ value: "name", text: "Name" }]}
                           displaySelectOptions={false}
@@ -111,7 +114,11 @@ class Table1 extends React.Component {
                               this.props.SetValue2("endUser.userCO", { ...recordDefault.endUser.userCO }, SET_RECORD_VALUE_NEW);
                             }
                           }
-                          value={((record.endUser.userCO) && (record.endUser.userCO.hasOwnProperty("name")) && record.endUser.userCO.name.first != "") ? this.props.ArrangeName(record.endUser.userCO.name) : record.text.userCO}
+                          // 
+                          // value={((record.endUser.userCO) && (record.endUser.userCO.hasOwnProperty("name")) && record.endUser.userCO.name.first != "") ? this.props.ArrangeName(record.endUser.userCO.name) : record.text.userCO}
+                          value={this.props.GetSafe(() => {
+                            return this.props.ArrangeName(record.endUser.userCO.name)
+                          }, record.text.userCO)}
                           title={<span>CO<span className="astrsk"> *</span></span>}
                           options={[{ value: "name", text: "Name" }]}
                           displaySelectOptions={false}

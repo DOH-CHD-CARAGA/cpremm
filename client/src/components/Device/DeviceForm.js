@@ -60,7 +60,8 @@ class DeviceForm extends React.Component {
                     {text: "Monitor", value: "monitor"}, {text: "Printer", value: "printer"},
                     {text: "Scanner", value: "scanner"}, {text: "Ups", value: "ups"}, 
                     {text: "Avr", value: "avr"},{ text: "Router", value: "router" },
-                    { text: "Camera", value: "camera" },{ text: "Speaker", value: "speaker" },{ text: "Tablet", value: "tablet" },
+                    { text: "Camera", value: "camera" },{ text: "Speaker", value: "speaker" },
+                    { text: "Projector", value: "projector" },{ text: "Tablet", value: "tablet" },
                   ]}
                   onChange={(e) => {
                     this.props.SetValue(e, SET_DEVICE_VALUE);

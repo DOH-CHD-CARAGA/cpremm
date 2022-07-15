@@ -342,6 +342,11 @@ export const SubmitRecord = (data, key) => (dispatch, getState) => {
       monitor: record.devices.monitor,
       avr: record.devices.avr,
       ups: record.devices.ups,
+      ups: record.devices.router,
+      ups: record.devices.camera,
+      ups: record.devices.speaker,
+      ups: record.devices.projector,
+      ups: record.devices.tablet,
     },
 
     otherDevices: [...record.otherDevices.map((device, i) => { return { device: device._id } })],

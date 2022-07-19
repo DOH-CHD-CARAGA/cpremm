@@ -553,8 +553,9 @@ export const GetDevicesDashboardNumbers = (id) => (dispatch, getState) => {
         // devices[x]._id.status;
         // devices[x]._id.type;
 
+        //Change Current and Prev Year Here......
         status = (devices[x]._id.status == 1) ? "inUse" : "waste";
-        tempYear = (devices[x]._id.year == 2021) ? "current" : "previous";
+        tempYear = (devices[x]._id.year == 2022) ? "current" : "previous";
         type = devices[x]._id.type;
 
         // numbers = {

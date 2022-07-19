@@ -573,7 +573,7 @@ export const GetDevicesDashboardNumbers = (id) => (dispatch, getState) => {
 
       }
 
-      // console.log(offices);
+      console.log(offices);
       // console.log(numbers);
 
 
@@ -1099,6 +1099,7 @@ export const GetDevicesDashboardNumbers = (id) => (dispatch, getState) => {
       };
 
       var assign = {
+        "ACCOUNTING":"MSD",
         "SERVICE DELIVERY NETWORK": "SDN",
         "RLED": "RLED",
         "PLANNING SUPPORT STAFF": "PLANNING",
@@ -1152,23 +1153,23 @@ export const GetDevicesDashboardNumbers = (id) => (dispatch, getState) => {
       };
 
       var assignKeys = Object.keys(assign);
-      for (let x = 0; x < assignKeys.length; x++) {
-        finalRecord[assign[assignKeys[x]]] = {
-          avr: finalRecord[assign[assignKeys[x]]].avr + offices[assignKeys[x]].avr,
-          desktop: finalRecord[assign[assignKeys[x]]].desktop + offices[assignKeys[x]].desktop,
-          laptop: finalRecord[assign[assignKeys[x]]].laptop + offices[assignKeys[x]].laptop,
-          monitor: finalRecord[assign[assignKeys[x]]].monitor + offices[assignKeys[x]].monitor,
-          printer: finalRecord[assign[assignKeys[x]]].printer + offices[assignKeys[x]].printer,
-          projector: finalRecord[assign[assignKeys[x]]].projector + offices[assignKeys[x]].projector,
-          scanner: finalRecord[assign[assignKeys[x]]].scanner + offices[assignKeys[x]].scanner,
-          ups: finalRecord[assign[assignKeys[x]]].ups + offices[assignKeys[x]].ups,
-          router: finalRecord[assign[assignKeys[x]]].router + offices[assignKeys[x]].router,
-          camera: finalRecord[assign[assignKeys[x]]].camera + offices[assignKeys[x]].camera,
-          speaker: finalRecord[assign[assignKeys[x]]].speaker + offices[assignKeys[x]].speaker,
-          tablet: finalRecord[assign[assignKeys[x]]].tablet + offices[assignKeys[x]].tablet,
-        }
-
-      }
+      console.log(assignKeys);
+      // for (let x = 0; x < assignKeys.length; x++) {
+      //   finalRecord[assign[assignKeys[x]]] = {
+      //     avr: finalRecord[assign[assignKeys[x]]].avr + offices[assignKeys[x]].avr,
+      //     desktop: finalRecord[assign[assignKeys[x]]].desktop + offices[assignKeys[x]].desktop,
+      //     laptop: finalRecord[assign[assignKeys[x]]].laptop + offices[assignKeys[x]].laptop,
+      //     monitor: finalRecord[assign[assignKeys[x]]].monitor + offices[assignKeys[x]].monitor,
+      //     printer: finalRecord[assign[assignKeys[x]]].printer + offices[assignKeys[x]].printer,
+      //     projector: finalRecord[assign[assignKeys[x]]].projector + offices[assignKeys[x]].projector,
+      //     scanner: finalRecord[assign[assignKeys[x]]].scanner + offices[assignKeys[x]].scanner,
+      //     ups: finalRecord[assign[assignKeys[x]]].ups + offices[assignKeys[x]].ups,
+      //     router: finalRecord[assign[assignKeys[x]]].router + offices[assignKeys[x]].router,
+      //     camera: finalRecord[assign[assignKeys[x]]].camera + offices[assignKeys[x]].camera,
+      //     speaker: finalRecord[assign[assignKeys[x]]].speaker + offices[assignKeys[x]].speaker,
+      //     tablet: finalRecord[assign[assignKeys[x]]].tablet + offices[assignKeys[x]].tablet,
+      //   }
+      // }
 
 
       dispatch({
@@ -1179,6 +1180,7 @@ export const GetDevicesDashboardNumbers = (id) => (dispatch, getState) => {
 
     })
     .catch(err => {
+      console.log(err);
     })
 }
 
